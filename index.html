@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gear Head Garage Repair | Tyler, TX Automotive Repair</title>
+  <meta name="description" content="Gear Head Garage Repair is an automotive repair shop in Tyler, Texas offering diagnostics, engine repair, brake work, suspension, electrical troubleshooting, transmission service, maintenance, and honest mechanic service." />
+  <style>
+    :root {
+      --bg: #0f141b;
+      --bg-soft: #18212c;
+      --panel: #ffffff;
+      --panel-soft: #f3f5f7;
+      --text: #10151b;
+      --text-light: #ffffff;
+      --muted: #5d6875;
+      --line: #d8dde3;
+      --accent: #c62828;
+      --accent-dark: #9e1d1d;
+      --accent-soft: #fbe7e7;
+      --navy: #132235;
+      --navy-2: #1c3047;
+      --shadow: 0 18px 45px rgba(10, 18, 28, .14);
+      --radius: 20px;
+      --max: 1220px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #eef2f5;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: #0b1118;
+      color: rgba(255,255,255,.84);
+      font-size: 14px;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      flex-wrap: wrap;
+    }
+
+    .topbar strong { color: #fff; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(19,34,53,.96);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 16px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+      flex: 0 1 auto;
+    }
+
+    .brand-mark {
+      width: 68px;
+      height: 68px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.16);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex: 0 0 auto;
+      box-shadow: 0 10px 22px rgba(0,0,0,.18);
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-logo {
+      width: 92px;
+      height: 92px;
+      border-radius: 18px;
+      overflow: hidden;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: 0 12px 28px rgba(0,0,0,.18);
+      margin-bottom: 16px;
+    }
+
+    .hero-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .brand-text {
+      min-width: 0;
+    }
+
+    .brand-text h1 {
+      margin: 0;
+      color: #fff;
+      font-size: 22px;
+      line-height: 1.05;
+      white-space: nowrap;
+    }
+
+    .brand-text p {
+      margin: 5px 0 0;
+      color: rgba(255,255,255,.72);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 18px;
+      flex: 1 1 auto;
+      min-width: 0;
+      flex-wrap: nowrap;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,.86);
+      font-weight: 700;
+      font-size: 15px;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover { color: #fff; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 13px 22px;
+      font-weight: 800;
+      font-size: 15px;
+      transition: .18s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: linear-gradient(145deg, var(--accent), #df4d4d);
+      color: #fff;
+      box-shadow: 0 12px 28px rgba(198,40,40,.24);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,.12);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.16);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(10,18,28,.82) 0%, rgba(10,18,28,.68) 38%, rgba(10,18,28,.36) 100%),
+        url('https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&w=1800&q=80') center/cover;
+      color: #fff;
+    }
+
+    .hero-inner {
+      width: 100%;
+      padding: 90px 0 120px;
+    }
+
+    .hero-card {
+      max-width: 760px;
+      background: rgba(9, 16, 24, .62);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 24px;
+      padding: 36px;
+      box-shadow: 0 18px 45px rgba(0,0,0,.20);
+      backdrop-filter: blur(4px);
+      margin-left: 60px; /* moved slightly right */
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: rgba(198,40,40,.16);
+      color: #ffd5d5;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero h2 {
+      margin: 0 0 12px;
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: .98;
+      letter-spacing: -.03em;
+      max-width: 12ch;
+    }
+
+    .hero .subhead {
+      margin: 0 0 14px;
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .hero .lead {
+      margin: 0 0 24px;
+      color: rgba(255,255,255,.85);
+      font-size: 18px;
+      max-width: 62ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255,255,255,.2);
+    }
+
+    .hero-info {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+      color: rgba(255,255,255,.82);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .hero-info span {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .service-strip-wrap {
+      margin-top: -44px;
+      position: relative;
+      z-index: 3;
+    }
+
+    .service-strip {
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      border: 1px solid #dde3ea;
+      overflow: hidden;
+    }
+
+    .service-strip-top {
+      background: linear-gradient(90deg, var(--navy), var(--navy-2));
+      color: #fff;
+      padding: 18px 24px;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .service-strip-items {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+
+    .service-pill {
+      flex: 1 1 0;
+      min-width: 160px;
+      padding: 18px 14px;
+      text-align: center;
+      border-right: 1px solid #e5eaf0;
+      font-weight: 800;
+      color: var(--navy);
+      background: #fff;
+      white-space: nowrap;
+    }
+
+    .service-pill:last-child { border-right: none; }
+
+    section {
+      padding: 56px 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .section-head h3 {
+      margin: 0;
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.04;
+      letter-spacing: -.02em;
+      color: var(--navy);
+    }
+
+    .section-head p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      max-width: 700px;
+      font-size: 17px;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid #dde3ea;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 30px;
+    }
+
+    .panel h4 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      color: var(--navy);
+    }
+
+    .panel p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .feature-item {
+      background: var(--panel-soft);
+      border: 1px solid #e4e8ee;
+      border-radius: 16px;
+      padding: 14px 16px;
+    }
+
+    .feature-item strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .photo-panel {
+      min-height: 100%;
+      background:
+        linear-gradient(180deg, rgba(19,34,53,.10), rgba(19,34,53,.55)),
+        url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1400&q=80') center/cover;
+      border-radius: var(--radius);
+      border: 1px solid #dde3ea;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      min-height: 480px;
+    }
+
+    .photo-caption {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+      background: rgba(255,255,255,.92);
+      border-radius: 18px;
+      padding: 16px 18px;
+      color: var(--text);
+      border: 1px solid rgba(19,34,53,.10);
+    }
+
+    .photo-caption strong {
+      display: block;
+      font-size: 18px;
+      color: var(--navy);
+      margin-bottom: 5px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .stat {
+      background: #fff;
+      border: 1px solid #dde3ea;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 28px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .services-grid,
+    .issues-grid,
+    .reviews,
+    .team-grid,
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .faq-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .card {
+      background: #fff;
+      border: 1px solid #dde3ea;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+
+    .card h4 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      color: var(--navy);
+    }
+
+    .card p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .review-stars {
+      color: var(--accent);
+      letter-spacing: 1px;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .review-name {
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .team-card {
+      background: #fff;
+      border: 1px solid #dde3ea;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .team-photo {
+      height: 260px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .team-1 { background-image: linear-gradient(180deg, rgba(19,34,53,.08), rgba(19,34,53,.35)), url('https://images.unsplash.com/photo-1613214149922-f1809c99b414?auto=format&fit=crop&w=1200&q=80'); }
+    .team-2 { background-image: linear-gradient(180deg, rgba(19,34,53,.08), rgba(19,34,53,.35)), url('https://images.unsplash.com/photo-1632823471565-1ecdf2ddf0a7?auto=format&fit=crop&w=1200&q=80'); }
+    .team-3 { background-image: linear-gradient(180deg, rgba(19,34,53,.08), rgba(19,34,53,.35)), url('https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1200&q=80'); }
+
+    .team-copy {
+      padding: 22px;
+    }
+
+    .team-copy h4 {
+      margin: 0 0 4px;
+      color: var(--navy);
+      font-size: 22px;
+    }
+
+    .team-copy span {
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .team-copy p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .contact-box {
+      background: #fff;
+      border: 1px solid #dde3ea;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+
+    .contact-box h4 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 24px;
+    }
+
+    .contact-box > p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .contact-item {
+      background: var(--panel-soft);
+      border: 1px solid #e4e8ee;
+      border-radius: 16px;
+      padding: 14px 16px;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .contact-item span {
+      color: var(--muted);
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    label {
+      display: grid;
+      gap: 8px;
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid #cfd6dd;
+      border-radius: 14px;
+      padding: 14px 15px;
+      font: inherit;
+      color: var(--text);
+      background: #fff;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .map-box {
+      min-height: 260px;
+      margin-top: 18px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid #dde3ea;
+      background:
+        linear-gradient(180deg, rgba(19,34,53,.10), rgba(19,34,53,.42)),
+        url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1400&q=80') center/cover;
+      display: flex;
+      align-items: end;
+      padding: 18px;
+    }
+
+    .map-tag {
+      background: rgba(255,255,255,.94);
+      border-radius: 14px;
+      padding: 12px 14px;
+      max-width: 280px;
+      border: 1px solid rgba(19,34,53,.10);
+    }
+
+    .map-tag strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .map-tag span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cta-band {
+      background: linear-gradient(90deg, var(--navy), var(--navy-2));
+      color: #fff;
+      border-radius: 24px;
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-band h3 {
+      margin: 0 0 6px;
+      font-size: 30px;
+      color: #fff;
+    }
+
+    .cta-band p {
+      margin: 0;
+      color: rgba(255,255,255,.82);
+      max-width: 720px;
+    }
+
+    footer {
+      background: #0d1620;
+      color: rgba(255,255,255,.76);
+      margin-top: 56px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      padding: 28px 0;
+    }
+
+    @media (max-width: 1120px) {
+      .nav { gap: 16px; }
+      .nav-links { gap: 12px; }
+      .nav-links a { font-size: 14px; }
+      .service-strip-items,
+      .stats,
+      .services-grid,
+      .issues-grid,
+      .reviews,
+      .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .intro-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .nav {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .brand {
+        justify-content: flex-start;
+      }
+      .brand-text h1,
+      .brand-text p {
+        white-space: normal;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+      .hero {
+        min-height: 560px;
+      }
+      .hero-inner {
+        padding: 60px 0 90px;
+      }
+      .hero-card {
+        padding: 26px;
+      }
+      .service-strip-wrap {
+        margin-top: -26px;
+      }
+      .service-strip-items,
+      .stats,
+      .services-grid,
+      .issues-grid,
+      .reviews,
+      .team-grid,
+      .faq-grid,
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      .cta-band {
+        padding: 24px;
+      }
+    }
+  .call-bubble {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: linear-gradient(145deg, #c62828, #e04b4b);
+      color: #fff;
+      border-radius: 18px;
+      box-shadow: 0 14px 35px rgba(0,0,0,.25);
+      padding: 16px 18px;
+      z-index: 999;
+      max-width: 260px;
+      font-size: 14px;
+    }
+
+    .call-bubble strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 15px;
+    }
+
+    .call-bubble a {
+      display: block;
+      margin-top: 6px;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .call-bubble {
+        right: 10px;
+        bottom: 10px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div><strong>Gear Head Garage Repair</strong> | Professional automotive repair in Tyler, Texas</div>
+      <div>7234 FM 14, Tyler, TX 75706</div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a href="#top" class="brand">
+        <div class="brand-mark"><img src="gearhead-logo.jpg" alt="Gear Head Garage Repair logo" /></div>
+        <div class="brand-text">
+          <h1>Gear Head Garage Repair</h1>
+          <p>Automotive Repair Shop | Tyler, TX</p>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#whats-wrong">What’s Wrong</a>
+        <a href="#team">Our Techs</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary" href="#contact">Request Service</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-card">
+          <div class="hero-logo"><img src="gearhead-logo.jpg" alt="Gear Head Garage Repair logo" /></div>
+          <div class="eyebrow">Trusted Local Auto Repair</div>
+          <h2>Gear Head Garage Repair</h2>
+          <p class="subhead">Straight answers. Dependable repairs. Real mechanic experience.</p>
+          <p class="lead">We help Tyler drivers keep their vehicles safe, reliable, and road-ready with honest diagnostics, quality repair work, and the kind of communication customers wish every shop gave them. If your vehicle is inoperable, we can come pick it up and tow it to the shop to get it handled.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Schedule Service</a>
+            <a class="btn btn-secondary" href="#services">See Our Services</a>
+          </div>
+
+          <div class="hero-info">
+            <span>Diagnostics</span>
+            <span>Engine Repair</span>
+            <span>Brake Service</span>
+            <span>Electrical Issues</span>
+            <span>Towing Available</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="service-strip-wrap">
+      <div class="container">
+        <div class="service-strip">
+          <div class="service-strip-top">What We Do</div>
+          <div class="service-strip-items">
+            <div class="service-pill">Engine Repair</div>
+            <div class="service-pill">Diagnostics</div>
+            <div class="service-pill">Brakes</div>
+            <div class="service-pill">Suspension</div>
+            <div class="service-pill">Electrical</div>
+            <div class="service-pill">Towing Available</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h3>About the shop</h3>
+            <p>Gear Head Garage Repair is built around the idea that auto repair should feel professional, honest, and clear. Customers should know what is wrong, what needs to happen next, and why the repair matters.</p>
+          </div>
+        </div>
+
+        <div class="intro-grid">
+          <div class="panel">
+            <h4>Why people choose Gear Head Garage Repair</h4>
+            <p>We are an automotive repair shop in Tyler, Texas focused on doing things the right way. That means finding the actual cause of the issue, explaining it in normal language, and making repairs with a long-term mindset instead of a shortcut mindset.</p>
+            <p>Whether your vehicle is a daily driver, a family SUV, or a hard-working pickup, our approach stays the same: diagnose carefully, repair correctly, and treat people with respect.</p>
+
+            <div class="feature-list">
+              <div class="feature-item">
+                <strong>We can pick up your vehicle</strong>
+                If your vehicle will not run, we can come get it and tow it to the shop so you do not have to deal with the headache.
+              </div>
+              <div class="feature-item">
+                <strong>Honest diagnostics</strong>
+                We do not want to guess at problems or throw random parts at your vehicle.
+              </div>
+              <div class="feature-item">
+                <strong>Clear communication</strong>
+                We explain the issue, the repair path, and what matters most before moving ahead.
+              </div>
+              <div class="feature-item">
+                <strong>Reliable repair work</strong>
+                The goal is not just to get the vehicle out the door. The goal is to help it leave right.
+              </div>
+              <div class="feature-item">
+                <strong>Professional experience</strong>
+                Customers want a shop that feels clean, capable, and dependable from the first impression.
+              </div>
+            </div>
+          </div>
+
+          <div class="photo-panel">
+            <div class="photo-caption">
+              <strong>Automotive repair with a service-first mindset</strong>
+              <span>Gear Head Garage Repair is positioned as a trustworthy local shop focused on real mechanical work, real answers, and dependable customer care.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="stats">
+          <div class="stat">
+            <strong>Diagnostics First</strong>
+            <span>Find the real issue before replacing parts.</span>
+          </div>
+          <div class="stat">
+            <strong>Honest Service</strong>
+            <span>Clear recommendations without the runaround.</span>
+          </div>
+          <div class="stat">
+            <strong>Quality Repairs</strong>
+            <span>Work aimed at long-term reliability and confidence.</span>
+          </div>
+          <div class="stat">
+            <strong>Tyler, TX</strong>
+            <span>Local automotive repair for East Texas drivers.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h3>Our services</h3>
+            <p>The website is now structured more like strong local competitors: a clear top banner, a broad service summary, and organized sections that quickly tell customers what the shop handles.</p>
+          </div>
+        </div>
+
+        <div class="services-grid">
+          <article class="card">
+            <h4>Engine Repair & Performance</h4>
+            <p>When your vehicle is running rough, lacking power, overheating, or showing signs of engine trouble, we help identify the cause and move toward the right repair.</p>
+            <ul>
+              <li>Misfires and rough idle</li>
+              <li>Cooling system concerns</li>
+              <li>Fuel and air delivery issues</li>
+              <li>Leaks, noises, and drivability problems</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h4>Electrical & Diagnostics</h4>
+            <p>Electrical issues can be frustrating and hard to pin down. We present the shop as methodical and capable when it comes to warning lights, no-starts, and intermittent problems.</p>
+            <ul>
+              <li>Check engine light diagnostics</li>
+              <li>Battery, starter, and alternator issues</li>
+              <li>Sensor and wiring problems</li>
+              <li>No-start and intermittent failures</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h4>Brake Service & Safety</h4>
+            <p>Brake concerns need quick attention. This section tells customers that safety-related repairs are taken seriously and handled clearly.</p>
+            <ul>
+              <li>Brake pads, rotors, and calipers</li>
+              <li>Brake noise and vibration concerns</li>
+              <li>Hydraulic system checks</li>
+              <li>ABS-related concerns</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h4>Suspension & Steering</h4>
+            <p>If your vehicle pulls, clunks, bounces, or feels unstable, this section gives customers immediate reassurance that the shop handles front-end and ride-quality issues.</p>
+            <ul>
+              <li>Steering concerns</li>
+              <li>Shocks and struts</li>
+              <li>Ride quality and stability issues</li>
+              <li>General front-end repair needs</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h4>Transmission & Drivetrain</h4>
+            <p>Shifting concerns, driveline vibration, and power transfer issues are presented as areas where proper diagnosis matters before larger repair decisions get made.</p>
+            <ul>
+              <li>Transmission-related concerns</li>
+              <li>Axle and driveshaft issues</li>
+              <li>Differential concerns</li>
+              <li>Noise and vibration diagnosis</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h4>Maintenance & Inspections</h4>
+            <p>Good shops do more than major repair. They also help customers stay ahead of breakdowns through regular maintenance and common-sense inspections.</p>
+            <ul>
+              <li>Oil and fluid services</li>
+              <li>Routine maintenance checks</li>
+              <li>Vehicle health inspections</li>
+              <li>Repair recommendations</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="whats-wrong">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h3>What’s wrong with your vehicle?</h3>
+            <p>This section is designed to catch customers who do not know the repair they need yet—they just know the vehicle is acting up. That tends to convert better than only listing services.</p>
+          </div>
+        </div>
+
+        <div class="issues-grid">
+          <article class="card">
+            <h4>Check engine light on</h4>
+            <p>A warning light can point to anything from a small issue to a larger drivability problem. The key is testing before guessing.</p>
+          </article>
+          <article class="card">
+            <h4>Noises, smells, or vibration</h4>
+            <p>Grinding, squealing, shaking, clunking, or burning smells usually mean the vehicle needs attention before the problem grows.</p>
+          </article>
+          <article class="card">
+            <h4>Hard start or no start</h4>
+            <p>If your vehicle is slow to crank, struggles to fire up, or does not start at all, the problem may be electrical, fuel-related, or sensor-based.</p>
+          </article>
+          <article class="card">
+            <h4>Loss of power</h4>
+            <p>If the vehicle hesitates, feels sluggish, or is not driving the way it should, a deeper diagnosis may be needed.</p>
+          </article>
+          <article class="card">
+            <h4>Brakes feel wrong</h4>
+            <p>Soft pedal, squeaking, grinding, vibration, or longer stopping distance should be inspected as soon as possible.</p>
+          </article>
+          <article class="card">
+            <h4>Leaks under the vehicle</h4>
+            <p>Oil, coolant, transmission fluid, and brake fluid leaks can lead to bigger failures quickly if left alone.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h3>Why customers trust the shop</h3>
+            <p>Local shop sites that feel the strongest usually mix service claims with trust language. This section helps your site feel more established and more believable.</p>
+          </div>
+        </div>
+
+        <div class="reviews">
+          <div class="card">
+            <div class="review-stars">★★★★★</div>
+            <p>“They explained the issue in a way that actually made sense and did not make me feel pressured into repairs I did not understand.”</p>
+            <div class="review-name">Clear communication</div>
+          </div>
+          <div class="card">
+            <div class="review-stars">★★★★★</div>
+            <p>“The shop felt professional, clean, and capable. It gave me a lot more confidence than the average repair place.”</p>
+            <div class="review-name">Professional first impression</div>
+          </div>
+          <div class="card">
+            <div class="review-stars">★★★★★</div>
+            <p>“I wanted straight answers and dependable work, and that is exactly how the experience felt from start to finish.”</p>
+            <div class="review-name">Honest, dependable service</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h3>Reliable technicians you can trust</h3>
+            <p>The team section gives the site that real-shop feel you asked for—professional faces, mechanic imagery, and language that feels grounded instead of cheesy.</p>
+          </div>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card">
+            <div class="team-photo team-1"></div>
+            <div class="team-copy">
+              <h4>Lead Diagnostic Tech</h4>
+              <span>Electrical and drivability troubleshooting</span>
+              <p>Presented as the kind of technician who takes complicated issues seriously and works through them with a systematic process.</p>
+            </div>
+          </article>
+          <article class="team-card">
+            <div class="team-photo team-2"></div>
+            <div class="team-copy">
+              <h4>General Repair Specialist</h4>
+              <span>Dependable day-to-day repair work</span>
+              <p>Built to communicate that the shop handles practical repairs with care, consistency, and solid workmanship.</p>
+            </div>
+          </article>
+          <article class="team-card">
+            <div class="team-photo team-3"></div>
+            <div class="team-copy">
+              <h4>Shop Support & Inspection</h4>
+              <span>Customer confidence and repair flow</span>
+              <p>This helps the business feel organized, professional, and more complete to a first-time site visitor.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="faq-grid">
+          <div class="card">
+            <h4>Do I need an appointment?</h4>
+            <p>Appointments are helpful for diagnostics and larger repair needs, but the site language keeps the process friendly and approachable for new customers.</p>
+          </div>
+          <div class="card">
+            <h4>Can you diagnose a check engine light?</h4>
+            <p>Yes. The site positions Gear Head Garage Repair as a shop that believes in diagnosis before parts replacement.</p>
+          </div>
+          <div class="card">
+            <h4>What if I do not know what is wrong?</h4>
+            <p>That is normal. Many customers only know the vehicle sounds, smells, feels, or drives differently than it should.</p>
+          </div>
+          <div class="card">
+            <h4>What kinds of vehicles do you work on?</h4>
+            <p>The page is written to support broad automotive repair and maintenance for common customer vehicles in the Tyler area.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h3>Need your vehicle looked at?</h3>
+            <p>Tell us what your car, truck, or SUV is doing and let Gear Head Garage Repair point you toward the right next step. If it will not run, we can arrange pickup and towing to the shop.</p>
+          </div>
+          <a class="btn btn-primary" href="#contact-form">Request Service</a>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top: 8px;">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h3>Contact us</h3>
+            <p>This layout now follows the pattern you described: full banner image first, then shop description, then the horizontal service bar, then the rest of the site content underneath in a more normal business-site flow.</p>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-box">
+            <h4>Shop information</h4>
+            <p>Serving Tyler, Texas with professional automotive repair and a clear customer-first approach.</p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <strong>Towing & Pickup</strong>
+                <span>If your vehicle is inoperable, we can come pick it up and tow it to the shop for repair.</span>
+              </div>
+              <div class="contact-item">
+                <strong>Business Name</strong>
+                <span>Gear Head Garage Repair</span>
+              </div>
+              <div class="contact-item">
+                <strong>Address</strong>
+                <span>7234 FM 14, Tyler, Texas 75706</span>
+              </div>
+              <div class="contact-item">
+                <strong>Website</strong>
+                <span>gearheadgaragerepair.com</span>
+              </div>
+              <div class="contact-item">
+                <strong>Call the Shop</strong>
+                <span>Dustin (Foreman): 903-279-4331 | J.C. (Foreman): 903-869-2228</span>
+              </div>
+              <div class="contact-item">
+                <strong>What to send us</strong>
+                <span>Your contact info, vehicle details, and a short description of the issue.</span>
+              </div>
+            </div>
+
+            <div class="map-box">
+              <div class="map-tag">
+                <strong>Gear Head Garage Repair</strong>
+                <span>Conveniently located in Tyler, TX for local automotive repair customers.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-box" id="contact-form">
+            <h4>Request service</h4>
+            <p>Built like a real intake form so a developer can later connect it to email, scheduling software, or a CRM.</p>
+
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="contact" />
+              <p style="display:none;">
+                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+              </p>
+              <div class="form-row">
+                <label>
+                  First Name
+                  <input type="text" name="first_name" placeholder="John" />
+                </label>
+                <label>
+                  Last Name
+                  <input type="text" name="last_name" placeholder="Smith" />
+                </label>
+              </div>
+
+              <div class="form-row">
+                <label>
+                  Phone Number
+                  <input type="tel" name="phone" placeholder="(903) 555-1234" />
+                </label>
+                <label>
+                  Email Address
+                  <input type="email" name="email" placeholder="you@example.com" />
+                </label>
+              </div>
+
+              <div class="form-row">
+                <label>
+                  Vehicle Year / Make / Model
+                  <input type="text" name="vehicle" placeholder="2017 Ford F-150" />
+                </label>
+                <label>
+                  Service Type
+                  <select name="service_type">
+                    <option>Choose a service</option>
+                    <option>Diagnostics</option>
+                    <option>Engine Repair</option>
+                    <option>Brakes</option>
+                    <option>Suspension / Steering</option>
+                    <option>Electrical</option>
+                    <option>Transmission / Drivetrain</option>
+                    <option>Maintenance</option>
+                    <option>Not Sure Yet</option>
+                  </select>
+                </label>
+              </div>
+
+              <label>
+                What’s going on with your vehicle?
+                <textarea name="message" placeholder="Tell us what the vehicle is doing: warning lights, noises, smells, hard starting, poor braking, loss of power, leaks, vibration, or anything else you have noticed."></textarea>
+              </label>
+
+              <button type="submit" class="btn btn-primary" style="width: fit-content; border:0; cursor:pointer;">Submit Service Request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© Gear Head Garage Repair | Tyler, Texas</div>
+      <div>Built with a local-shop look: strong banner, red/navy palette, service strip, and clear sections.</div>
+    </div>
+  </footer>
+  <div class="call-bubble">
+    <strong>Call Now</strong>
+    <a href="tel:19032794331">Dustin (Foreman) – 903-279-4331</a>
+    <a href="tel:19038692228">J.C. (Foreman) – 903-869-2228</a>
+  </div>
+</body>
+</html>
